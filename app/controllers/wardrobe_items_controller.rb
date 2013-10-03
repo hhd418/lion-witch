@@ -41,6 +41,12 @@ class WardrobeItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @wardrobe_item = WardrobeItem.find(params[:id])
+    @wardrobe_item.destroy
+    
+  end
+
   private
   
   def wardrobe_item_params

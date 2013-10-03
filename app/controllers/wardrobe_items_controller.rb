@@ -32,6 +32,7 @@ class WardrobeItemsController < ApplicationController
 
   def update
      @wardrobe_item = WardrobeItem.find(params[:id])
+     @wardrobe_item.update(wardrobe_item_params)
      
      redirect_to @wardrobe_item
   end

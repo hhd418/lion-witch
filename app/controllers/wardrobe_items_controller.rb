@@ -45,6 +45,8 @@ class WardrobeItemsController < ApplicationController
     @wardrobe_item = WardrobeItem.find(params[:id])
     @wardrobe_item.destroy
     
+    redirect_to wardrobe_items_url
+
   end
 
   private

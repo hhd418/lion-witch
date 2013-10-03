@@ -1,5 +1,7 @@
 %h1 Listing wardrobe items
 
+%button= link_to 'New', new_wardrobe_item_path
+
 %table
   %thead
     %tr
@@ -7,6 +9,8 @@
       %th Label
       %th Season
       %th Color
+      %th
+      %th
       %th
   
   %tbody
@@ -17,3 +21,5 @@
         %td= wardrobe_item.season
         %td= wardrobe_item.color
         %td= link_to 'Show', wardrobe_item
+        %td= link_to 'Edit', edit_wardrobe_item_path(wardrobe_item)
+        %td= link_to 'Delete', wardrobe_item_path(wardrobe_item), :method => :delete

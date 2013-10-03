@@ -32,6 +32,8 @@ class WardrobeItemsController < ApplicationController
 
   def update
      @wardrobe_item = WardrobeItem.find(params[:id])
+     
+     redirect_to @wardrobe_item
   end
 
   private

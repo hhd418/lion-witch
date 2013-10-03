@@ -33,8 +33,12 @@ class WardrobeItemsController < ApplicationController
   def update
      @wardrobe_item = WardrobeItem.find(params[:id])
      @wardrobe_item.update(wardrobe_item_params)
-     
-     redirect_to @wardrobe_item
+
+    if @wardrobe_item.save
+      redirect_to @wardrobe_item
+    else
+      render action: 'edit'
+    end
   end
 
   private

@@ -26,6 +26,10 @@ class WardrobeItemsController < ApplicationController
     end
   end
 
+  def edit
+
+  end
+
   private
   
   def wardrobe_item_params
